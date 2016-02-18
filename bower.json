@@ -1,0 +1,22 @@
+{
+  "name": "lopez-wedding",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Caroline Horn <caroline@curiouschaos.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/cchaos/lopez-wedding",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "material-design-lite": "^1.1.1"
+  }
+}
