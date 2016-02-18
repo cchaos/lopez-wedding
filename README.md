@@ -20,6 +20,11 @@ connected to your network.
 `serve` does not use [service worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction/)
 caching, so your site will stop being available when the web server stops running.
 
+If 'EONT' errors occur, run the following command
+```sh
+$ gulp clean
+```
+
 ## Build & Optimize
 
 ```sh
