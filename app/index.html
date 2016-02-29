@@ -37,7 +37,7 @@
     -->
 
     <!-- Material Design icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- Your styles -->
     <link rel="stylesheet" href="styles/main.css">
@@ -46,85 +46,80 @@
     <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
       <main class="mdl-layout__content">
         <div class="demo-blog__posts mdl-grid">
-          <!--
-<div class="mdl-card coffee-pic mdl-cell mdl-cell--8-col">
+
+          <div id="date" class="mdl-card mdl-cell mdl-cell--8-col">
             <div class="mdl-card__media mdl-color-text--grey-50">
-              <h3><a href="entry.html">Coffee Pic</a></h3>
+              <h3>October 29, 2016</h3>
             </div>
             <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-              <div class="minilogo"></div>
+              <i class="material-icons md-24 mdl-color-text--grey-400">pin_drop</i>
               <div>
-                <strong>The Newist</strong>
-                <span>2 days ago</span>
+                <strong>The Tidewater Inn, Easton, Maryland</strong>
+                <span></span>
               </div>
             </div>
           </div>
-          <div class="mdl-card something-else mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop">
-            <button class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent">
-              <i class="material-icons mdl-color-text--white" role="presentation">add</i>
-              <span class="visuallyhidden">add</span>
-            </button>
-            <div class="mdl-card__media mdl-color--white mdl-color-text--grey-600">
-              <img src="images/blog/logo.png">
-              +1,337
-            </div>
-            <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600">
-              <div>
-                <strong>The Newist</strong>
-              </div>
-              <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="menubtn">
-                <li class="mdl-menu__item">About</li>
-                <li class="mdl-menu__item">Message</li>
-                <li class="mdl-menu__item">Favorite</li>
-                <li class="mdl-menu__item">Search</li>
-              </ul>
-              <button id="menubtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                <i class="material-icons" role="presentation">more_vert</i>
-                <span class="visuallyhidden">show menu</span>
-              </button>
+
+          <div id="coming-soon" class="mdl-card mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop">
+            <div class="mdl-card__media mdl-color--white mdl-color-text--grey-400">
+              <h2>More information coming soon</h2>
             </div>
           </div>
--->
-          <div class="mdl-card on-the-road-again mdl-cell mdl-cell--12-col">
+
+          <div id="accomodations" class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col">
             <div class="mdl-card__media mdl-color-text--grey-50">
-              <h3>Where to stay</h3>
-              <!-- <p>We have reserved a block of rooms at the venue and two other close by hotels.</p> -->
+              <div>
+              	<h3>Where to stay</h3>
+              	<p>We have reserved a block of rooms at the venue and two other close by hotels.</p>
+              </div>
             </div>
-            <div class="mdl-color-text--grey-600">
-              <table class="mdl-data-table mdl-js-data-table">
+            <div class="content mdl-color-text--grey-600">
+              <table class="mdl-data-table">
 							  <thead>
 							    <tr>
-							      <th class="mdl-data-table__cell--non-numeric" width="100%">Material</th>
-							      <th>Quantity</th>
-							      <th>Unit price</th>
+							      <th class="mdl-data-table__cell--non-numeric" width="100%">Hotel</th>
+							      <th>Distance </th>
+							      <th>Price</th>
 							    </tr>
 							  </thead>
 							  <tbody>
-							    <tr data-mdl-data-table-selectable-name="materials[]" data-mdl-data-table-selectable-value="acrylic">
-							      <td class="mdl-data-table__cell--non-numeric">Acrylic (Transparent)</td>
-							      <td>250</td>
-							      <td>$2.90</td>
+							    <tr>
+							      <td class="mdl-data-table__cell--non-numeric">
+								      <h5>The Tidewater Inn
+								      	<i id="hotel-star" class="material-icons md-18 mdl-color-text--yellow-600" role="presentation">star</i><span class="mdl-tooltip" for="hotel-star">Wedding Location</span>
+							      	</h5>
+							      	<p>101 East Dover Street, Easton, MD 21601</p>
+								      <p><strong>To make a reservation:</strong> <br>
+									      call The Tidewater Inn at 410.822.1300 and mention the Horn/Lopez Wedding.
+								      </p>
+							      </td>
+							      <td>0mi</td>
+							      <td>$290/night</td>
 							    </tr>
-							    <tr data-mdl-data-table-selectable-name="materials[]" data-mdl-data-table-selectable-value="plywood">
-							      <td class="mdl-data-table__cell--non-numeric">Plywood (Birch)</td>
-							      <td>50</td>
-							      <td>$1.25</td>
+							    <tr>
+							      <td class="mdl-data-table__cell--non-numeric">
+								      <h5>Holiday Inn Express Easton</h5>
+								      <p>8561 Ocean Gateway, Easton, MD 21601</p>
+								      <p><a href="https://www.hiexpress.com/hotels/us/en/easton/easex/hoteldetail">Click this link to make a reservation.</a></p>
+								    </td>
+							      <td>1.4mi</td>
+							      <td>$125/night</td>
 							    </tr>
-							    <tr data-mdl-data-table-selectable-name="materials[]" data-mdl-data-table-selectable-value="laminate">
-							      <td class="mdl-data-table__cell--non-numeric">Laminate (Gold on Blue)</td>
-							      <td>10</td>
-							      <td>$12.35</td>
+							    <tr>
+							      <td class="mdl-data-table__cell--non-numeric">
+								      <h5>Comfort Inn Easton</h5>
+								      <p>8523 Ocean Gateway, Easton, MD 21601</p>
+								      <p><strong>To make a reservation:</strong> <br>
+									      call Comfort Inn at 410-820-8333 and mention the Horn/Lopez Wedding.
+								      </p>
+							      </td>
+							      <td>1.3mi</td>
+							      <td>$12.35/night</td>
 							    </tr>
 							  </tbody>
 							</table>
             </div>
-            <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-              <div class="minilogo"></div>
-              <div>
-                <strong>The Newist</strong>
-                <span>2 days ago</span>
-              </div>
-            </div>
+            <!-- <div class="mdl-card__supporting-text meta"></div> -->
           </div>
 <!--
           <div class="mdl-card amazing mdl-cell mdl-cell--12-col">
@@ -194,22 +189,24 @@
     </div>
 
     <!-- build:js(app/) ../../scripts/main.min.js -->
-    <script src="./bower_components/material-design-lite/src/mdlComponentHandler.js"></script>
-    <script src="./bower_components/material-design-lite/src/button/button.js"></script>
-    <script src="./bower_components/material-design-lite/src/checkbox/checkbox.js"></script>
-    <script src="./bower_components/material-design-lite/src/icon-toggle/icon-toggle.js"></script>
-    <script src="./bower_components/material-design-lite/src/menu/menu.js"></script>
-    <script src="./bower_components/material-design-lite/src/progress/progress.js"></script>
-    <script src="./bower_components/material-design-lite/src/radio/radio.js"></script>
-    <script src="./bower_components/material-design-lite/src/slider/slider.js"></script>
-    <script src="./bower_components/material-design-lite/src/spinner/spinner.js"></script>
-    <script src="./bower_components/material-design-lite/src/switch/switch.js"></script>
-    <script src="./bower_components/material-design-lite/src/tabs/tabs.js"></script>
-    <script src="./bower_components/material-design-lite/src/textfield/textfield.js"></script>
-    <script src="./bower_components/material-design-lite/src/tooltip/tooltip.js"></script>
-    <script src="./bower_components/material-design-lite/src/layout/layout.js"></script>
-    <script src="./bower_components/material-design-lite/src/data-table/data-table.js"></script>
-    <script src="/bower_components/material-design-lite/src/ripple/ripple.js"></script>
+<!--
+    <script src="bower_components/material-design-lite/src/mdlComponentHandler.js"></script>
+    <script src="bower_components/material-design-lite/src/button/button.js"></script>
+    <script src="bower_components/material-design-lite/src/checkbox/checkbox.js"></script>
+    <script src="bower_components/material-design-lite/src/icon-toggle/icon-toggle.js"></script>
+    <script src="bower_components/material-design-lite/src/menu/menu.js"></script>
+    <script src="bower_components/material-design-lite/src/progress/progress.js"></script>
+    <script src="bower_components/material-design-lite/src/radio/radio.js"></script>
+    <script src="bower_components/material-design-lite/src/slider/slider.js"></script>
+    <script src="bower_components/material-design-lite/src/spinner/spinner.js"></script>
+    <script src="bower_components/material-design-lite/src/switch/switch.js"></script>
+    <script src="bower_components/material-design-lite/src/tabs/tabs.js"></script>
+    <script src="bower_components/material-design-lite/src/textfield/textfield.js"></script>
+    <script src="bower_components/material-design-lite/src/tooltip/tooltip.js"></script>
+    <script src="bower_components/material-design-lite/src/layout/layout.js"></script>
+    <script src="bower_components/material-design-lite/src/data-table/data-table.js"></script>
+    <script src="bower_components/material-design-lite/src/ripple/ripple.js"></script>
+-->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
 

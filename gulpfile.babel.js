@@ -111,25 +111,25 @@ gulp.task('scripts', () =>
       //       you need to explicitly list your scripts here in the right order
       //       to be correctly concatenated
       // Component handler
-      './bower_components/material-design-lite/src/mdlComponentHandler.js',
-      // Base components
-      './bower_components/material-design-lite/src/button/button.js',
-      './bower_components/material-design-lite/src/checkbox/checkbox.js',
-      './bower_components/material-design-lite/src/icon-toggle/icon-toggle.js',
-      './bower_components/material-design-lite/src/menu/menu.js',
-      './bower_components/material-design-lite/src/progress/progress.js',
-      './bower_components/material-design-lite/src/radio/radio.js',
-      './bower_components/material-design-lite/src/slider/slider.js',
-      './bower_components/material-design-lite/src/spinner/spinner.js',
-      './bower_components/material-design-lite/src/switch/switch.js',
-      './bower_components/material-design-lite/src/tabs/tabs.js',
-      './bower_components/material-design-lite/src/textfield/textfield.js',
-      './bower_components/material-design-lite/src/tooltip/tooltip.js',
-      // Complex components (which reuse base components)
-      './bower_components/material-design-lite/src/layout/layout.js',
-      './bower_components/material-design-lite/src/data-table/data-table.js',
-      // And finally, the ripples
-      './bower_components/material-design-lite/src/ripple/ripple.js',
+      //'./app/bower_components/material-design-lite/src/mdlComponentHandler.js',
+      //// Base components
+      //'./app/bower_components/material-design-lite/src/button/button.js',
+      //'./app/bower_components/material-design-lite/src/checkbox/checkbox.js',
+      //'./app/bower_components/material-design-lite/src/icon-toggle/icon-toggle.js',
+      //'./app/bower_components/material-design-lite/src/menu/menu.js',
+      //'./app/bower_components/material-design-lite/src/progress/progress.js',
+      //'./app/bower_components/material-design-lite/src/radio/radio.js',
+      //'./app/bower_components/material-design-lite/src/slider/slider.js',
+      //'./app/bower_components/material-design-lite/src/spinner/spinner.js',
+      //'./app/bower_components/material-design-lite/src/switch/switch.js',
+      //'./app/bower_components/material-design-lite/src/tabs/tabs.js',
+      //'./app/bower_components/material-design-lite/src/textfield/textfield.js',
+      //'./app/bower_components/material-design-lite/src/tooltip/tooltip.js',
+      //// Complex components (which reuse base components)
+      //'./app/bower_components/material-design-lite/src/layout/layout.js',
+      //'./app/bower_components/material-design-lite/src/data-table/data-table.js',
+      //// And finally, the ripples
+      //'./app/bower_components/material-design-lite/src/ripple/ripple.js',
       // Other scripts,
       './app/scripts/main.js'
     ])
@@ -153,7 +153,7 @@ gulp.task('html', () => {
     // Remove any unused CSS
     .pipe($.if('*.css', $.uncss({
       html: [
-        'app/index.html'
+        'c/index.html'
       ],
       // CSS Selectors for UnCSS to ignore
       ignore: []

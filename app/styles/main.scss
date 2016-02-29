@@ -19,7 +19,23 @@ Note: any .css or .scss files included in the 'styles' directory
 will be correctly compiled during `gulp serve` and `gulp`
  */
 
+@import "../bower_components/material-design-lite/src/_color-definitions";
+
+// Use color primarily for emphasis. Choose colors that fit with
+// your brand and provide good contrast between visual components.
+$color-primary: $palette-blue-grey-600;
+$color-primary-dark: $palette-blue-grey-700;
+$color-accent: "189,50,76";
+
+$card-image-placeholder-color: unquote("rgb(#{$color-primary})");
+
 @import "../bower_components/material-design-lite/src/material-design-lite";
+
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
 
 html, body {
   font-family: 'Roboto', 'Helvetica', sans-serif;
@@ -27,8 +43,80 @@ html, body {
   padding: 0;
 }
 
+body {
+  background-color: unquote("rgb(#{$palette-blue-grey-900})");
+}
+
 // TEMPLATES
 
 @import
 	"templates/mdl.scss",
 	"templates/blog.scss";
+
+body::before {
+	background-position-y: bottom;
+	opacity: .6;
+}
+
+@media (max-width: 512px)  and (min-resolution: 1.5dppx),
+       (max-width: 1024px) and (max-resolution: 1.5dppx) {
+  body::before {
+    background-image: url('../images/unsplash/leaves.jpg');
+  }
+}
+@media (min-width: 513px)  and (max-width: 1024px) and (min-resolution: 1.5dppx),
+       (min-width: 1025px) and (max-width: 2048px) and (max-resolution: 1.5dppx)  {
+  body::before {
+    background-image: url('../images/unsplash/leaves.jpg');
+  }
+}
+@media (min-width: 1025px) and (min-resolution: 1.5dppx),
+       (min-width: 2049px) and (max-resolution: 1.5dppx) {
+  body::before {
+    background-image: url('../images/unsplash/leaves.jpg');
+  }
+}
+
+.demo-blog.mdl-layout .mdl-layout__content {
+  padding-top: 120px;
+}
+
+#date .mdl-card__media {
+  background: url('../images/couple/maine.jpg') center;
+  background-size: cover;
+}
+
+#coming-soon {
+	.is-small-screen & {
+		min-height: 0;
+	}
+}
+
+#accomodations {
+  /* background: url('../images/unsplash/road-trees.jpg') center bottom; */
+  background-size: cover;
+
+	.content {
+		background-color: #fff;
+
+		> p {
+		  padding: 24px;
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+
+		table {
+			border: none;
+
+			th {
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+
+#hotel-star {
+	cursor: default;
+}
