@@ -1,0 +1,203 @@
+html, body {
+	margin: 0;
+	padding: 0;
+
+	background-color: $gold;
+}
+
+main,
+footer {
+	background-color: white;
+	max-width: 90rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+//
+// COMMON
+//
+header,
+section,
+footer {
+	padding: 2rem;
+
+	> p:last-child {
+		margin-bottom: 0;
+	}
+}
+
+#when-where,
+#registry,
+h1 {
+	max-width: 36rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+//
+// HEADER
+//
+header {
+	background: url('../images/_backgrounds/foliage.svg') no-repeat center center,
+							url('../images/_backgrounds/water.jpg') no-repeat center center;
+	background-size: cover, cover;
+	padding: 4rem 0;
+
+	transition: padding .25s;
+
+	@media screen and (min-width: 840px) {
+		background: url('../images/_backgrounds/foliage_top.svg') repeat-x center top,
+								url('../images/_backgrounds/foliage_right.svg') repeat-y right center,
+								url('../images/_backgrounds/foliage_bottom.svg') repeat-x center bottom,
+								url('../images/_backgrounds/foliage_left.svg') repeat-y left center,
+								url('../images/_backgrounds/water_2x.jpg') no-repeat center bottom;
+		background-size: auto, auto, auto, auto, cover;
+		padding: 8rem 0;
+	}
+
+	img {
+		max-width: 50%;
+	}
+}
+
+h1 {
+	text-align: center;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+// NAV
+nav {
+	display: none;
+
+	position: fixed;
+	right: 0px;
+	top: 0px;
+	margin: 0;
+
+	> ul {
+		display: none;
+	}
+}
+
+//
+// WHEN/WHERE
+//
+#when-where {
+
+	h2 {
+		display: none;
+	}
+
+	hr {
+		height: 44.3px;
+		background-image: url('../images/divider-rings.svg');
+		margin-bottom: 4rem;
+		margin-top: 1rem;
+	}
+
+	img {
+		display: block;
+		max-width: 80%;
+		margin: 1rem auto;
+	}
+}
+
+//
+// ACCOMODATIONS
+//
+#accomodations {
+	max-width: 52rem;
+	margin: 0 auto;
+
+	hr {
+		height: 45.5px;
+		background-image: url('../images/divider-crab.svg');
+	}
+
+	.columns-3 {
+		font-size: 80%;
+
+		> div {
+			max-width: 24rem;
+			margin: 0 auto;
+
+			&:last-child p {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	@media screen and (min-width: 48rem) {
+		.columns-3 {
+			display: flex;
+
+			> div {
+				padding: 0 2rem;
+				text-align: center;
+			}
+		}
+	}
+}
+
+//
+// REGISTRY
+//
+#registry {
+	text-align: center;
+	padding-bottom: 5rem;
+
+	hr {
+		height: 39.8px;
+		background-image: url('../images/divider-hearts.svg');
+	}
+
+	.logos {
+		margin-bottom: 0;
+	}
+
+	a > img {
+		border: 1px solid rgba($gray-blue, .2);
+
+		transition: border .25s;
+		&:hover,
+		&:focus {
+			border-color: rgba($gray-blue, .75);
+		}
+
+		&:first-child {
+			margin-right: 1rem;
+		}
+	}
+}
+
+//
+// FOOTER
+//
+
+footer {
+	text-align: center;
+	margin-bottom: 0;
+	padding: 16rem 0 0;
+
+	background: $blue url('../images/_backgrounds/couple-sunglasses.jpg') no-repeat center center;
+	background-size: cover;
+
+	p {
+		padding: .5rem;
+		background-color: $blue;
+		margin-bottom: 0;
+
+		color: rgba($gold, .5);
+	}
+
+	@media screen and (min-width: 768px) {
+		padding-top: 24rem;
+		background-image: url('../images/_backgrounds/couple-sunglasses_2x.jpg');
+	}
+}
+
+//
+//  2x BACKGROUNDS
+//
+

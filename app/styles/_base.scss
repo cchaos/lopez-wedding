@@ -1,0 +1,112 @@
+//
+// COLORS
+//
+
+$red: #683333;
+$gold: #e2d7be;
+$blue: #37474f;
+$gray-blue: #676d6e;
+$green: #3e653a;
+
+//
+// TYPE
+//
+
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:300,700);
+
+$font-weight-normal: 300;
+$font-weight-bold: 700;
+
+
+html {
+	font-size: 16px;
+	font-size: 100%;
+
+	font-family: 'Roboto Slab', serif;
+	font-weight: $font-weight-normal;
+	color: $gray-blue;
+}
+
+h1, h2, h3, p {
+	line-height: 26px;
+	line-height: 1.625rem;
+	margin: 0 0 26px;
+	margin: 0 0 1.625rem;
+}
+
+a {
+	color: $red;
+	font-weight: $font-weight-bold;
+
+	transition: color .15s;
+
+	&:hover,
+	&:focus {
+		color: lighten($red, 20%);
+	}
+
+	&:visited {
+		color: $blue;
+	}
+}
+
+h1, h2, h3 {
+	font-weight: $font-weight-normal;
+	color: $red;
+}
+
+h2 {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+//
+// EXTRAS
+//
+
+img {
+	max-width: 100%;
+
+	&.large {
+		display: none !important;
+	}
+
+	@media screen and (min-width: 768px) {
+		&.small {
+			display: none !important;
+		}
+		&.large {
+			display: block !important;
+		}
+	}
+}
+
+hr {
+	border: none;
+	width: 299.6px;
+	margin: 1rem auto 6rem;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+	max-width: 60%;
+}
+
+//
+// LARGER SCREENS
+//
+
+@media screen and (min-width: 768px) {
+
+	html {
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
+
+	h1, h2, h3, p {
+		line-height: 31px;
+		line-height: 1.7222222222rem;
+		margin-bottom: 31px;
+		margin-bottom: 1.7222222222rem;
+	}
+
+}
