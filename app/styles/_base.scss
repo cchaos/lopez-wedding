@@ -2,8 +2,8 @@
 // COLORS
 //
 
-$red: #683333;
-$gold: #e2d7be;
+$red: #7C3333;
+$gold: #CEB07C;
 $blue: #37474f;
 $gray-blue: #676d6e;
 $green: #3e653a;
@@ -36,8 +36,6 @@ h1, h2, h3, p {
 
 a {
 	color: $red;
-	font-weight: $font-weight-bold;
-
 	transition: color .15s;
 
 	&:hover,
@@ -46,11 +44,11 @@ a {
 	}
 
 	&:visited {
-		color: $blue;
+		color: darken($red, 10%);
 	}
 }
 
-h1, h2, h3 {
+h1, h2 {
 	font-weight: $font-weight-normal;
 	color: $red;
 }
@@ -58,6 +56,19 @@ h1, h2, h3 {
 h2 {
 	text-align: center;
 	text-transform: uppercase;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-red {
+	color: $red;
+}
+
+.no-break {
+	word-break: keep-all;
+	white-space: nowrap;
 }
 
 //
@@ -82,13 +93,22 @@ img {
 }
 
 hr {
+	border-color: $gold;
+	opacity: .25;
+	border-width: 1px 0 0;
+	width: 20%;
+	margin-bottom: 1.4rem;
+}
+
+hr.graphic {
+	opacity: 1;
 	border: none;
-	width: 299.6px;
+	width: 369px;
 	margin: 1rem auto 6rem;
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: contain;
-	max-width: 60%;
+	max-width: 100%;
 }
 
 //

@@ -41,8 +41,9 @@ header {
 	background: url('../images/_backgrounds/foliage.svg') no-repeat center center,
 							url('../images/_backgrounds/water.jpg') no-repeat center center;
 	background-size: cover, cover;
-	padding: 4rem 0;
+	background-color: $blue;
 
+	padding: 4rem 0;
 	transition: padding .25s;
 
 	@media screen and (min-width: 840px) {
@@ -86,17 +87,11 @@ nav {
 #when-where {
 
 	h2 {
-		display: none;
-	}
-
-	hr {
-		height: 44.3px;
-		background-image: url('../images/divider-rings.svg');
+		margin-top: 3rem;
 		margin-bottom: 4rem;
-		margin-top: 1rem;
 	}
 
-	img {
+	p > img {
 		display: block;
 		max-width: 80%;
 		margin: 1rem auto;
@@ -107,12 +102,24 @@ nav {
 // ACCOMODATIONS
 //
 #accomodations {
-	max-width: 52rem;
+	max-width: 60rem;
 	margin: 0 auto;
 
-	hr {
-		height: 45.5px;
+	hr.graphic {
+		height: 46px;
 		background-image: url('../images/divider-crab.svg');
+	}
+
+	h3 {
+		margin-bottom: 0;
+
+		+ p {
+			margin-bottom: .65rem;
+		}
+	}
+
+	sup > a {
+		text-decoration: none;
 	}
 
 	.columns-3 {
@@ -121,20 +128,25 @@ nav {
 		> div {
 			max-width: 24rem;
 			margin: 0 auto;
-
-			&:last-child p {
-				margin-bottom: 0;
-			}
 		}
 	}
 
-	@media screen and (min-width: 48rem) {
+	@media screen and (min-width: 67rem) {
 		.columns-3 {
 			display: flex;
+			flex-wrap: wrap;
 
 			> div {
+				flex: 1 0%;
 				padding: 0 2rem;
-				text-align: center;
+			}
+
+			hr {
+				display: none;
+			}
+
+			p {
+				flex: 1 100%;
 			}
 		}
 	}
@@ -147,15 +159,36 @@ nav {
 	text-align: center;
 	padding-bottom: 5rem;
 
-	hr {
-		height: 39.8px;
-		background-image: url('../images/divider-hearts.svg');
+	hr.graphic {
+		height: 31px;
+		background-image: url('../images/divider-plane.svg');
 	}
 
 	.logos {
-		margin-bottom: 0;
+		a {
+			margin-left: .25rem;
+			margin-right: .25rem;
+		}
 	}
 
+	.paypal a {
+		display: inline-block;
+		line-height: 1em;
+		padding: 1.2rem 2rem;
+		font-size: 130%;
+		text-decoration: none;
+		color: $gray-blue;
+		text-transform: uppercase;
+		letter-spacing: .05em;
+
+		small {
+			text-transform: none;
+			font-size: 60%;
+			letter-spacing: 0;
+		}
+	}
+
+	.paypal a,
 	a > img {
 		border: 1px solid rgba($gray-blue, .2);
 
@@ -163,10 +196,6 @@ nav {
 		&:hover,
 		&:focus {
 			border-color: rgba($gray-blue, .75);
-		}
-
-		&:first-child {
-			margin-right: 1rem;
 		}
 	}
 }
@@ -188,7 +217,9 @@ footer {
 		background-color: $blue;
 		margin-bottom: 0;
 
-		color: rgba($gold, .5);
+		&, a, a:visited {
+			color: rgba(white, .25);
+		}
 	}
 
 	@media screen and (min-width: 768px) {
