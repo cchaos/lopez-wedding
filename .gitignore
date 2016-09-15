@@ -3,3 +3,4 @@ dist/
 .tmp
 app.yaml
 bower_components
+.DS_Store
